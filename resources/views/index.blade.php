@@ -26,7 +26,7 @@
                 <th scope="col">series</th>
                 <th scope="col">sale date</th>
                 <th scope="col">type</th>
-
+                <th scope="col">#</th>
             </tr>
         </thead>
         <tbody>
@@ -38,6 +38,7 @@
                 <td>{{$comic["series"]}}</td>
                 <td>{{$comic["sale_date"]}}</td>
                 <td>{{$comic["type"]}}</td>
+                <td><a href="{{route('show',$comic['id'])}}" class="btn btn-primary">Show</a></td>
             </tr>
             @endforeach
 
