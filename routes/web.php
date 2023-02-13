@@ -14,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ComicsController::class, "index"]);
+Route::get('/', [ComicsController::class, "index"]);//*tanto per*
+
+Route::get('/comics', [ComicsController::class, "index"]);
 
 
-Route::get('/{id}', function () {
+Route::get('/comis/{id}', function () {
     return view('show');
 });
