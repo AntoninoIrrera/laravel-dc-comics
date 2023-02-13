@@ -4,6 +4,10 @@
 @section("main-content")
 <main>
 
+    <div class="text-end me-3 mt-3">
+        <a href="#" class="btn btn-secondary">Create</a>
+    </div>
+
     <table class="table">
         <thead>
             <tr>
@@ -25,7 +29,12 @@
                 <td>{{$comic["series"]}}</td>
                 <td>{{$comic["sale_date"]}}</td>
                 <td>{{$comic["type"]}}</td>
-                <td><a href="{{route('show',$comic['id'])}}" class="btn btn-primary">Show</a></td>
+                <td>
+                    <a href="{{route('show',$comic['id'])}}" class="btn btn-primary">Show</a>
+                    <a href="#" class="btn btn-warning">Edit</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                </td>
+
             </tr>
             @endforeach
 
