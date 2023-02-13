@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\Admin\ComicsController as ComicsController;
+use App\Http\Controllers\Admin\ComicsController as ComicsControllerAdmin;
+use App\Http\Controllers\Guest\ComicsController as ComicsControllerGuest;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ComicsController::class, "index"]);//*tanto per*
+Route::get('/', [ComicsControllerGuest::class, "index"])->name("home");
 
-Route::get('/comics', [ComicsController::class, "index"])->name("index");
+Route::get('/admin/comics', [ComicsControllerAdmin::class, "index"])->name("index");
 
 
-Route::get('/comis/{id}', [ComicsController::class, "show"])->name("show");
+Route::get('/comis/{id}', [ComicsControllerAdmin::class, "show"])->name("show");
