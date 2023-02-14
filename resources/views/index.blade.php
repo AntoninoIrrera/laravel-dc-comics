@@ -5,7 +5,7 @@
 <main>
 
     <div class="text-end me-3 mt-3">
-        <a href="#" class="btn btn-secondary">Create</a>
+        <a href="{{route('create')}}" class="btn btn-secondary">Create</a>
     </div>
 
     <table class="table">
