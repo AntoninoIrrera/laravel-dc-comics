@@ -34,14 +34,10 @@ class ComicsController extends Controller
 
         $element = $request->all();
 
+
+
         $comic = new Comic();
-        $comic->title = $element["title"];
-        $comic->description = $element["description"];
-        $comic->thumb = $element["thumb"];
-        $comic->price = $element["price"];
-        $comic->series = $element["series"];
-        $comic->sale_date = $element["sale_date"];
-        $comic->type = $element["type"];
+        $comic->fill($element);
         $comic->save();
 
         return redirect()->route('show',$comic->id);
