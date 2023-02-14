@@ -27,10 +27,10 @@ Route::prefix('admin')->group(function () {
  
     Route::get('/comics', [ComicsControllerAdmin::class, "index"])->name("index");
 
-    Route::get('/create', [ComicsControllerAdmin::class, "create"])->name("create");
+    Route::get('/comics/create', [ComicsControllerAdmin::class, "create"])->name("create");
 
     Route::get('/comis/{id}', [ComicsControllerAdmin::class, "show"])->name("show");
 
-    Route::post('/store', [ComicsControllerAdmin::class, "store"])->name("store");
+    Route::post('/comics/store', [ComicsControllerAdmin::class, "store"])->name("store");
 
 });
