@@ -31,6 +31,6 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/comis/{id}', [ComicsControllerAdmin::class, "show"])->name("show");
 
-    Route::post('/comics/store', [ComicsControllerAdmin::class, "store"])->name("store");
+    Route::post('/comics', [ComicsControllerAdmin::class, "store"])->name("store");
 
 });
