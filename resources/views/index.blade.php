@@ -31,7 +31,7 @@
                 <td>{{$comic["type"]}}</td>
                 <td>
                     <a href="{{route('show',$comic['id'])}}" class="btn btn-primary">Show</a>
-                    <a href="#" class="btn btn-warning">Edit</a>
+                    <a href="{{route('edit',$comic['id'])}}" class="btn btn-warning">Edit</a>
                     <a href="#" class="btn btn-danger">Delete</a>
                 </td>
 

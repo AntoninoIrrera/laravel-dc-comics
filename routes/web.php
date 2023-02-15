@@ -22,15 +22,22 @@ Route::get('/', [ComicsControllerGuest::class, "index"])->name("home");
 // Route::get('/comis/{id}', [ComicsControllerAdmin::class, "show"])->name("show");
 // Route::post('/admin/store', [ComicsControllerAdmin::class, "store"])->name("store");
 
-
+// admin/comics ??!!?
 Route::prefix('admin')->group(function () {
  
     Route::get('/comics', [ComicsControllerAdmin::class, "index"])->name("index");
 
     Route::get('/comics/create', [ComicsControllerAdmin::class, "create"])->name("create");
 
-    Route::get('/comis/{id}', [ComicsControllerAdmin::class, "show"])->name("show");
-
     Route::post('/comics', [ComicsControllerAdmin::class, "store"])->name("store");
 
+    Route::get('/comics/{id}', [ComicsControllerAdmin::class, "show"])->name("show");
+
+    Route::get('/comics/{id}/edit', [ComicsControllerAdmin::class, "edit"])->name("edit");
+
+    Route::put('/comics/{id}', [ComicsControllerAdmin::class, "update"])->name("update");
+
+
 });
+
+
