@@ -5,6 +5,11 @@
 <main>
 
     <div class="text-end me-3 mt-3">
+        @if (session('message'))
+        <div class="d-inline-block alert alert-warning">
+            {{session('message')}}
+        </div>
+        @endif
         <a href="{{route('admin.create')}}" class="btn btn-secondary">Create</a>
     </div>
 

@@ -49,7 +49,7 @@ class ComicsController extends Controller
         $comic->fill($data);
         $comic->save();
 
-        return redirect()->route('admin.show',$comic->id);
+        return redirect()->route('admin.show',$comic->id)->with('message', "l'elemento è stato creato correttamente");
     }
 
 
@@ -69,7 +69,7 @@ class ComicsController extends Controller
 
         $comic->update($data);
 
-        return redirect()->route('admin.show', $comic->id);
+        return redirect()->route('admin.show', $comic->id)->with('message', "l'elemento è stato modificato corretamente");
 
     }
 
@@ -79,7 +79,7 @@ class ComicsController extends Controller
 
         $comic->delete();
 
-        return redirect()->route('admin.index');
+        return redirect()->route('admin.index')->with('message', "$comic->title è stato cancellato correttamente");
 
     }
 
