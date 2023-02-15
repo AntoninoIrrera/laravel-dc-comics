@@ -1,11 +1,11 @@
-@extends("layouts.app")
+@extends("admin.layouts.app")
 
 
 @section("main-content")
 <main>
 
     <div class="text-end me-3 mt-3">
-        <a href="{{route('create')}}" class="btn btn-secondary">Create</a>
+        <a href="{{route('admin.create')}}" class="btn btn-secondary">Create</a>
     </div>
 
     <table class="table">
@@ -30,9 +30,9 @@
                 <td>{{$comic["sale_date"]}}</td>
                 <td>{{$comic["type"]}}</td>
                 <td>
-                    <a href="{{route('show',$comic['id'])}}" class="btn btn-primary">Show</a>
-                    <a href="{{route('edit',$comic['id'])}}" class="btn btn-warning">Edit</a>
-                    <form class="d-inline-block" action="{{route('destroy', $comic['id'])}}" method="POST">
+                    <a href="{{route('admin.show',$comic['id'])}}" class="btn btn-primary">Show</a>
+                    <a href="{{route('admin.edit',$comic['id'])}}" class="btn btn-warning">Edit</a>
+                    <form class="d-inline-block" action="{{route('admin.destroy', $comic['id'])}}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-danger" type="submit">Delete</button>

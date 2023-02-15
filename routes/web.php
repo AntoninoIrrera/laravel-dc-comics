@@ -15,7 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ComicsControllerGuest::class, "index"])->name("home");
+Route::get('/', [ComicsControllerGuest::class, "home"])->name("guest.home");
+Route::get('/comics', [ComicsControllerGuest::class, "comics"])->name("guest.comics");
+Route::get('/comics/{id}', [ComicsControllerGuest::class, "show"])->name("guest.show");
+
 
 // Route::get('/admin/comics', [ComicsControllerAdmin::class, "index"])->name("index");
 // Route::get('/admin/create', [ComicsControllerAdmin::class, "create"])->name("create");
@@ -23,8 +26,13 @@ Route::get('/', [ComicsControllerGuest::class, "index"])->name("home");
 // Route::post('/admin/store', [ComicsControllerAdmin::class, "store"])->name("store");
 
 // admin/comics ??!!?
-Route::prefix('admin')->group(function () {
- 
+Route::prefix('admin')->name('admin.')->group(function () {
+
+    Route::get('/home', [ComicsControllerAdmin::class, "home"])->name("home");
+
+
+
+    
     Route::get('/comics', [ComicsControllerAdmin::class, "index"])->name("index");
 
     Route::get('/comics/create', [ComicsControllerAdmin::class, "create"])->name("create");

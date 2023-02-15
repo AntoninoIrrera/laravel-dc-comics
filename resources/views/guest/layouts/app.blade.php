@@ -17,11 +17,11 @@
 
 <body>
 
-    @include("shared.header")
+    @include("guest.shared.header")
 
     @yield("main-content")
 
-    @include("shared.footer")
+    @include("guest.shared.footer")
 
 
 

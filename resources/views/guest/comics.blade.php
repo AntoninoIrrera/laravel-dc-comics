@@ -1,4 +1,4 @@
-@extends("layouts.app")
+@extends("guest.layouts.app")
 
 
 @section("main-content")
@@ -17,7 +17,7 @@
                         <h2>{{$comic["price"]}}</h2>
                         <h2>{{$comic["sale_date"]}}</h2>
                         <h2>{{$comic["type"]}}</h2>
-                        <a class="btn btn-primary" href="{{route('show',$comic['id'])}}">Show</a>
+                        <a class="btn btn-primary" href="{{route('guest.show',$comic['id'])}}">Show</a>
                     </div>
                 </div>
             </div>
