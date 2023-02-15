@@ -37,6 +37,8 @@ Route::prefix('admin')->group(function () {
 
     Route::put('/comics/{id}', [ComicsControllerAdmin::class, "update"])->name("update");
 
+    Route::delete('/comics/{id}', [ComicsControllerAdmin::class, "destroy"])->name("destroy");
+
 
 });
 

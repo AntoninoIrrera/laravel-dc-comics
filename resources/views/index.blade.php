@@ -32,7 +32,11 @@
                 <td>
                     <a href="{{route('show',$comic['id'])}}" class="btn btn-primary">Show</a>
                     <a href="{{route('edit',$comic['id'])}}" class="btn btn-warning">Edit</a>
-                    <a href="#" class="btn btn-danger">Delete</a>
+                    <form class="d-inline-block" action="{{route('destroy', $comic['id'])}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger" type="submit">Delete</button>
+                    </form>
                 </td>
 
             </tr>
