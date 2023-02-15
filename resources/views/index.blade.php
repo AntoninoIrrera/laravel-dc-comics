@@ -46,3 +46,7 @@
     </table>
 </main>
 @endsection
+
+@section("scripts")
+@vite('resources/js/popupDelete.js')
+@endsection

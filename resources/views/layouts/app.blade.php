@@ -23,6 +23,9 @@
 
     @include("shared.footer")
 
+
+
+    @yield("scripts")
 </body>
 
 </html>
