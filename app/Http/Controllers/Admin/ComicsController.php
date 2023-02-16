@@ -43,6 +43,37 @@ class ComicsController extends Controller
 
         $data = $request->all();
 
+        $request->validate([
+            'title' => 'required|max:150|string',
+            'description' => 'required|string',
+            'thumb' => 'required|url',
+            'price' => 'required|numeric',
+            'series' => 'required|max:100|string',
+            'sale_date' => 'required|date',
+            'type' => 'required|max:100|string',
+
+        ],[
+            
+            'title.required' => 'il campo è obbligatorio',
+            'title.max' => 'il campo puo contenere massimo 150 caratteri',
+            'title.string' => 'il campo deve contenere una stringa',
+            'description.required' => 'il campo è obbligatorio',
+            'description.string' => 'il campo deve contenere una stringa',
+            'thumb.required' => 'il campo è obbligatorio',
+            'thumb.url' => 'il capo deve contenere un URL valido',
+            'price.required' => 'il campo è obbligatorio',
+            'price.numeric' => 'il capo deve contenere un numero',
+            'series.required' => 'il campo è obbligatorio',
+            'series.max' => 'il campo puo contenere massimo 100 caratteri',
+            'series.string' => 'il campo deve contenere una stringa',
+            'sale_date.required' => 'il campo è obbligatorio',
+            'sale_date.date' => 'il campo deve contenere una data valida',
+            'type.required' => 'il campo è obbligatorio',
+            'type.max' => 'il campo puo contenere massimo 100 caratteri',
+            'type.string' => 'il campo deve contenere una stringa',
+
+
+        ]);
 
 
         $comic = new Comic();
