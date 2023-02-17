@@ -41,9 +41,9 @@ class ComicsController extends Controller
     public function store(Request $request)
     {
 
-        $data = $request->all();
+        // $data = $request->all();
 
-        $request->validate([
+        $data = $request->validate([
             'title' => 'required|max:150|string',
             'description' => 'required|string',
             'thumb' => 'required|url',
@@ -94,9 +94,9 @@ class ComicsController extends Controller
     public function update(Request $request, $id)
     {
 
-        $data = $request->all();
+        // $data = $request->all();
 
-        $request->validate([
+        $data = $request->validate([
             'title' => 'required|max:150|string',
             'description' => 'required|string',
             'thumb' => 'required|url',
