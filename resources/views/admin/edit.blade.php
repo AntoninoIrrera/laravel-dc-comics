@@ -9,7 +9,7 @@
             @method('PUT')
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="form-label">title</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="" value="{{old('title') ?? $comic->title}}" name="title">
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="" value="{{old('title', $comic->title)}}" name="title">
                 @if ($errors->has('title'))
                 <div class="alert alert-danger mt-3">
                     <ul class="">
@@ -22,7 +22,7 @@
             </div>
             <div class="mb-3">
                 <label for="formGroupExampleInput2" class="form-label">description</label>
-                <textarea name="description" class="form-control">{{old('description') ?? $comic->description}}</textarea>
+                <textarea name="description" class="form-control">{{old('description', $comic->description)}}</textarea>
                 @if ($errors->has('description'))
                 <div class="alert alert-danger mt-3">
                     <ul class="">
@@ -35,7 +35,7 @@
             </div>
             <div class="mb-3">
                 <label for="formGroupExampleInput2" class="form-label">thumb</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="" value="{{old('thumb') ?? $comic->thumb}}" name="thumb">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="" value="{{old('thumb', $comic->thumb)}}" name="thumb">
                 @if ($errors->has('thumb'))
                 <div class="alert alert-danger mt-3">
                     <ul class="">
@@ -48,7 +48,7 @@
             </div>
             <div class="mb-3">
                 <label for="formGroupExampleInput2" class="form-label">price</label>
-                <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="" value="{{old('price') ?? $comic->price}}" name="price">
+                <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="" value="{{old('price', $comic->price)}}" name="price">
                 @if ($errors->has('price'))
                 <div class="alert alert-danger mt-3">
                     <ul class="">
@@ -61,7 +61,7 @@
             </div>
             <div class="mb-3">
                 <label for="formGroupExampleInput2" class="form-label">series</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="" value="{{old('series') ?? $comic->series}}" name="series">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="" value="{{old('series', $comic->series)}}" name="series">
                 @if ($errors->has('series'))
                 <div class="alert alert-danger mt-3">
                     <ul class="">
@@ -74,7 +74,7 @@
             </div>
             <div class="mb-3">
                 <label for="formGroupExampleInput2" class="form-label">sale date</label>
-                <input type="date" class="form-control" id="formGroupExampleInput2" placeholder="" value="{{old('sale_date') ?? $comic->sale_date}}" name="sale_date">
+                <input type="date" class="form-control" id="formGroupExampleInput2" placeholder="" value="{{old('sale_date', $comic->sale_date)}}" name="sale_date">
                 @if ($errors->has('sale_date'))
                 <div class="alert alert-danger mt-3">
                     <ul class="">
@@ -87,7 +87,7 @@
             </div>
             <div class="mb-3">
                 <label for="formGroupExampleInput2" class="form-label">type</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="" value="{{old('type') ?? $comic->type}}" name="type">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="" value="{{old('type', $comic->type)}}" name="type">
                 @if ($errors->has('type'))
                 <div class="alert alert-danger mt-3">
                     <ul class="">
